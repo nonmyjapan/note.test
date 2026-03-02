@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイ日記 - ノート風</title>
+    <style>
+        /* --- ここからデザイン設定（CSS） --- */
+        body {
+            background-color: #f0eada; /* 紙のような少し黄なりがかった色 */
+            font-family: "Hiragino Mincho ProN", "MS PMincho", serif; /* 雰囲気が出る明朝体 */
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+            margin: 0;
+        }
+
+        .notebook {
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            min-height: 800px;
+            padding: 60px 40px 40px 70px; /* 左側に赤い線のスペースを空ける */
+            position: relative;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            
+            /* 罫線（横線）を作る */
+            background-image: linear-gradient(#eee .1em, transparent .1em);
+            background-size: 100% 1.5em;
+            line-height: 1.5em;
+        }
+
+        /* 左側の赤い垂直線 */
+        .notebook::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 2px;
+            height: 100%;
+            background-color: #ff8585;
+            border-left: 1px solid #ff8585;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: #555;
+            text-align: center;
+            margin-top: 0;
+            border-bottom: none; /* 下線を消してノートらしく */
+        }
+
+        .diary-entry {
+            margin-bottom: 3em;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #d9534f;
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        /* --- ここまでデザイン設定 --- */
+    </style>
+</head>
+<body>
+
+    <div class="notebook">
+        <h1>My Digital Notebook</h1>
+
+        <div class="diary-entry">
+            <span class="date">2026.03.02</span>
+            <h2>GitHub Pagesを更新中</h2>
+            <p>
+                英語のメニューに苦戦しながらも、少しずつサイトが変わっていくのが面白い。<br>
+                インフラエンジニアへの第一歩として、まずはこの「自分の城」を整えてみよう。
+            </p>
+        </div>
+
+        <div class="diary-entry">
+            <span class="date">2026.03.03</span>
+            <h2>今日の積み上げ</h2>
+            <p>
+                HTMLとCSSの基本を学んだ。VBAもそうだが、<br>
+                自分が書いたコードで画面が変わる瞬間は、何度経験しても嬉しいものだ。
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
