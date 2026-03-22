@@ -3,114 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイ日記 - アンティークノート風</title>
+    <title>マイ日記 - ノート風</title>
     <style>
         body {
-            /* 背景をおしゃれに：古紙のようなテクスチャ画像（フリー素材）を使用 */
-            background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
-            background-color: #f3e5dc; /* 画像が読み込めない場合の予備色 */
+            background-color: #f0eada; /* 紙のような少し黄色みがかった色 */
             /* フォントを柔らかいゴシック体に変更 */
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
             display: flex;
             justify-content: center;
             padding: 50px 20px;
             margin: 0;
-            color: #4a4a4a; /* 文字色を少し茶色っぽく */
+            color: #333;
         }
 
         .notebook {
-            background-color: #fffef0; /* ノートの中身は少しクリーム色に */
+            background-color: #fff;
             width: 100%;
-            max-width: 650px;
-            min-height: 900px;
-            padding: 70px 50px 50px 90px;
+            max-width: 600px;
+            min-height: 800px;
+            padding: 60px 40px 40px 70px;
             position: relative;
-            box-shadow: 10px 10px 25px rgba(0,0,0,0.15); /* 影を強くして立体感を出す */
-            border-radius: 5px; /* 角を少し丸く */
-            
-            /* 罫線（横線）を点線にして、よりノートっぽく */
-            background-image: linear-gradient(to bottom, transparent 38px, #e0e0e0 39px, transparent 40px);
-            background-size: 100% 40px;
-            line-height: 40px; /* 行間を罫線に合わせる */
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            /* 罫線（横線）を作る */
+            background-image: linear-gradient(#eee .1em, transparent .1em);
+            background-size: 100% 1.5em;
+            line-height: 1.5em;
         }
 
-        /* 左側の赤い垂直線（缀じ目） */
+        /* 左側の赤い垂直線 */
         .notebook::before {
             content: "";
             position: absolute;
             top: 0;
-            left: 70px;
-            width: 3px;
+            left: 50px;
+            width: 2px;
             height: 100%;
-            background-color: #e67e7e;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            background-color: #ff8585;
+            border-left: 1px solid #ff8585;
         }
 
         h1 {
-            font-size: 2em;
-            color: #666;
+            font-size: 1.8em;
+            color: #555;
             text-align: center;
             margin-top: 0;
-            margin-bottom: 2.5em;
-            font-weight: normal;
+            margin-bottom: 2em;
         }
 
         .diary-entry {
-            margin-bottom: 4em;
+            margin-bottom: 3em;
             position: relative;
             z-index: 1;
         }
 
         .date {
             font-weight: bold;
-            color: #cd5c5c; /* 日付の色をアンティーク調の赤に */
+            color: #d9534f;
             display: block;
-            margin-bottom: 0.8em;
-            font-size: 1.1em;
+            margin-bottom: 0.5em;
         }
 
         h2 {
-            font-size: 1.3em;
-            margin: 0.8em 0;
-            color: #555;
+            font-size: 1.2em;
+            margin: 0.5em 0;
         }
 
         p {
             margin: 0;
-            /* 改行を反映させる設定 */
-            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
 
     <div class="notebook">
-        <h1>につき</h1>
+        <h1>✾マイ日記✾</h1>
 
         <div class="diary-entry">
-            <span class="date">2026.03.02</span>
+            <span class="date">2026.03.22</span>
             <h2>GitHub Pagesを更新中</h2>
             <p>
-英語のメニューに苦戦しながらも、少しずつサイトが変わっていくのが面白い。
-インフラエンジニアへの第一歩として、まずはこの「自分の城」を整えてみよう。
+                英語のメニューに苦戦しながらも、少しずつサイトが変わっていくのが面白い。<br>
+                インフラエンジニアへの第一歩として、まずはこの「自分の城」を整えてみよう。
             </p>
         </div>
 
         <div class="diary-entry">
-            <span class="date">2026.03.03</span>
+            <span class="date">2026.03.23</span>
             <h2>今日の積み上げ</h2>
             <p>
-HTMLとCSSの基本を学んだ。VBAもそうだが、
-自分が書いたコードで画面が変わる瞬間は、何度経験しても嬉しいものだ。
-            </p>
-        </div>
-
-        <div class="diary-entry">
-            <span class="date">2026.03.04</span>
-            <h2>VBAとHTMLの共通点</h2>
-            <p>
-仕事で触っているVBAも、今書いているHTMLも、結局は「決まったルール（構文）」に従って書くことが大切だと気づいた。
-インフラエンジニアの業務でも、こうした「正確に記述する力」がサーバーの構築ミスを防ぐ鍵になるのかもしれない。
+                HTMLとCSSの基本を学んだ。VBAもそうだが、<br>
+                自分が書いたコードで画面が変わる瞬間は、何度経験しても嬉しいものだ。
             </p>
         </div>
         
